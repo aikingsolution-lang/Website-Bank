@@ -67,9 +67,14 @@
 }
 
 html {
+  font-family: var(--font-sans) !important;
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
   -webkit-text-size-adjust: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, span, button, input, select, textarea, small, strong, th, td, caption, label, summary, .hero h1 {
+  font-family: var(--font-sans) !important;
 }
 
 body {
