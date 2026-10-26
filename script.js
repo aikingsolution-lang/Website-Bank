@@ -7,7 +7,7 @@ if (menu) {
     const open = nav ? nav.classList.toggle('open') : false;
     if (header) header.classList.toggle('nav-is-open', open);
     menu.setAttribute('aria-expanded', open);
-    menu.textContent = open ? 'Close' : 'Menu';
+    menu.textContent = open ? 'Close menu' : 'Menu';
   });
 
   // Close mobile navigation when a nav link is clicked (e.g., in-page anchors)
@@ -60,8 +60,8 @@ if (form) {
     const start = data.get('start') || '';
     const stage = data.get('stage') || '';
     const message = data.get('message') || '';
-    const subject = 'DPDP Compliance Inquiry — ' + name + ' (' + bank + ')';
-    const emailBody = 'Dear AIKing Solutions Team,\n\nI would like to inquire about DPDP compliance advisory for our organization. Here are our details:\n\n• Full Name: ' + name + '\n• Work Email: ' + email + '\n• Bank / Organization: ' + bank + '\n• Role: ' + role + '\n• Package of Interest: ' + pkg + '\n• Branch Network: ' + branches + '\n• Preferred Start: ' + start + '\n• Current DPDP Stage: ' + stage + '\n\nWhat we would like to discuss:\n' + message + '\n\nBest regards,\n' + name + '\n' + bank;
+    const subject = 'DPDP compliance inquiry — ' + name + ' (' + bank + ')';
+    const emailBody = 'Hello AIKing Solutions,\n\nI would like to discuss DPDP compliance advisory for our bank or organization. Here are our details:\n\n• Full name: ' + name + '\n• Work email: ' + email + '\n• Bank or organization: ' + bank + '\n• Role: ' + role + '\n• Package of interest: ' + pkg + '\n• Number of branches: ' + branches + '\n• Preferred start: ' + start + '\n• Current DPDP stage: ' + stage + '\n\nWhat we would like to discuss:\n' + message + '\n\nBest regards,\n' + name + '\n' + bank;
     const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=saurabhbelote112@gmail.com&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(emailBody);
     const mailtoUrl = 'mailto:saurabhbelote112@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(emailBody);
     
@@ -97,11 +97,11 @@ if (readiness.length) {
     const checked = [...readiness].filter(i => i.checked).length;
     const countEl = document.getElementById('readiness-count');
     const msgEl = document.getElementById('readiness-message');
-    if (countEl) countEl.textContent = checked + ' of 6 areas confirmed';
+    if (countEl) countEl.textContent = checked + ' of 6 areas selected';
     if (msgEl) {
       msgEl.textContent = checked === 6
-        ? 'These areas are marked as in place. An independent assessment can review evidence and identify gaps beyond this introductory checklist.'
-        : (6 - checked) + ' areas remain unconfirmed. Bring these into your readiness discussion; a selected area still needs evidence to establish its effectiveness.';
+        ? 'You have selected all six areas. A readiness assessment can review the evidence and identify gaps beyond this checklist.'
+        : 'Areas still to review: ' + (6 - checked) + '. Use these to guide your assessment discussion. Selected areas also need evidence of effective operation.';
     }
   }));
 }
