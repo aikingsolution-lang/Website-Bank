@@ -1648,8 +1648,24 @@ footer .fine {
 
   .site-header.nav-is-open,
   .site-header:has(.nav.open) {
-    height: auto;
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: #ffffff;
+    z-index: 999;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: none;
+  }
+
+  body.nav-is-open {
+    overflow: hidden;
+    touch-action: none;
   }
 
   .nav {
@@ -1663,7 +1679,7 @@ footer .fine {
     padding-bottom: 0;
   }
 
-  .brand {
+  .nav .brand {
     order: 1;
     z-index: 105;
     flex: 0 0 auto;
@@ -1672,6 +1688,13 @@ footer .fine {
     gap: 8px;
     height: 66px;
     width: auto !important;
+  }
+
+  .footer-top .brand {
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .menu-toggle {
@@ -1701,7 +1724,7 @@ footer .fine {
   }
 
   .nav.open {
-    padding-bottom: 16px;
+    padding-bottom: 48px;
   }
 
   .nav.open .nav-left {
@@ -1710,7 +1733,7 @@ footer .fine {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-    padding: 16px 0 12px;
+    padding: 18px 0 14px;
     margin-top: 0;
     border-top: 1px solid var(--border);
     width: 100%;
@@ -1722,7 +1745,7 @@ footer .fine {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-    padding: 12px 0 20px;
+    padding: 14px 0 28px;
     margin-top: 0;
     border-top: 1px solid #f0f0f2;
     width: 100%;
@@ -1730,10 +1753,10 @@ footer .fine {
 
   .nav.open .nav-left a,
   .nav.open .nav-right a:not(.nav-cta) {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     color: var(--ink);
-    padding: 8px 0;
+    padding: 10px 0;
     display: block;
     width: 100%;
     line-height: 1.4;
@@ -1749,12 +1772,12 @@ footer .fine {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 8px;
+    margin-top: 12px;
     padding: 14px 20px;
     font-size: 16px;
     font-weight: 600;
     border-radius: 30px;
-    background: rgba(0, 102, 204, 0.08);
+    background: #f0f7ff;
     border: 1.5px solid var(--blue);
     color: var(--blue) !important;
     text-align: center;

@@ -6,6 +6,7 @@ if (menu) {
     const header = document.querySelector('.site-header');
     const open = nav ? nav.classList.toggle('open') : false;
     if (header) header.classList.toggle('nav-is-open', open);
+    document.body.classList.toggle('nav-is-open', open);
     menu.setAttribute('aria-expanded', open);
     menu.textContent = open ? 'Close menu' : 'Menu';
   });
@@ -18,6 +19,7 @@ if (menu) {
       if (nav && nav.classList.contains('open')) {
         nav.classList.remove('open');
         if (header) header.classList.remove('nav-is-open');
+        document.body.classList.remove('nav-is-open');
         menu.setAttribute('aria-expanded', 'false');
         menu.textContent = 'Menu';
       }
