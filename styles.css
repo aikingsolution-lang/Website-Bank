@@ -2091,6 +2091,166 @@ footer .fine {
 }
 
 /* ==========================================================================
+   Privacy Policy & Legal Document Styles
+   ========================================================================== */
+
+.policy-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+}
+
+.policy-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 48px;
+}
+
+.policy-meta-item strong {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.policy-meta-item span,
+.policy-meta-item a {
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.policy-section {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.policy-section:last-of-type {
+  border-bottom: none;
+}
+
+.policy-section h2 {
+  font-size: 22px;
+  line-height: 1.35;
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+
+.policy-section h3 {
+  font-size: 17px;
+  line-height: 1.4;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+.policy-section p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #2c2c2e;
+  margin-bottom: 14px;
+}
+
+.policy-section ul {
+  margin: 12px 0 18px 20px;
+  padding: 0;
+}
+
+.policy-section li {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #2c2c2e;
+  margin-bottom: 8px;
+}
+
+.policy-governance {
+  margin-top: 48px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/* ==========================================================================
+   Blog & Editorial Article Styles
+   ========================================================================== */
+
+.blog-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+}
+
+.article-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.article-header h1 {
+  font-size: clamp(26px, 3.8vw, 36px);
+  line-height: 1.25;
+  margin: 0;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.article-body {
+  text-align: left;
+}
+
+.article-body h2 {
+  font-size: 22px;
+  line-height: 1.35;
+  margin-top: 36px;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+
+.article-body h3 {
+  font-size: 17px;
+  line-height: 1.4;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+
+.article-body p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #2c2c2e;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.article-body ul,
+.article-body ol {
+  margin: 12px 0 20px 24px;
+  padding: 0;
+}
+
+.article-body li {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #2c2c2e;
+  margin-bottom: 8px;
+}
+
+
+/* ==========================================================================
    Accessibility & Reduced Motion
    ========================================================================== */
 
